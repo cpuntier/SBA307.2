@@ -1,0 +1,32 @@
+.mycontainer{
+    background-color:#cfe2ff;
+    display: flex;
+}
+
+/* .name{
+    margin-left: auto;
+} */
+
+#container div{
+    margin-left: auto;
+}
+
+h1{
+    font-size :70pt;
+}
+
+tbody tr{
+    border: solid 1px #cfe2ff;
+}
+
+tr td{
+    border: solid 1px #cfe2ff;
+}
+
+tr > td{
+    text-align: center;
+}
+
+td img{
+    width: 150px;
+}
