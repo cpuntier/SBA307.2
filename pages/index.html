@@ -12,7 +12,7 @@
             align-items: center;
             width: 33vw;
             height: 100vh;
-            background-color: black;
+            background-color: cyan;
             color: white;
             flex-direction: column;
         }
@@ -22,14 +22,30 @@
             flex-direction: row;
         }
 
-        img:hover {
-            opacity: 0.5;
+
+        .hide {
+            display: none;
+            align-self:flex-start;
         }
 
+        a:hover  {
+            opacity: 0.5;
+            /* display: block; */
+        }
+
+        a:hover>.hide{
+            display: block;
+            align-self: flex-start;
+            
+        }
         body {
             animation: fadeInAnimation ease 3s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
+        }
+
+        h3 {
+            font-size: 25pt;
         }
 
         @keyframes fadeInAnimation {
@@ -46,19 +62,24 @@
 
 <body>
     <div class="rowcontainer">
-            <div class = "mycontainer" id = "leftcolumn"></div> 
-            <div class="mycontainer">
-                <h3>Select Your Character</h3>
-                <div>
-                    <a href="ryu.html"><img
-                            src="https://wiki.supercombo.gg/images/thumb/b/be/SF6_Ryu_Icon.png/112px-SF6_Ryu_Icon.png"
-                            alt=""></a>
-                    <a href="chun.html"><img
-                            src="https://wiki.supercombo.gg/images/thumb/1/1c/SF6_Chun-Li_Icon.png/112px-SF6_Chun-Li_Icon.png"
-                            alt=""></a>
-                        </div>
+        <div class="mycontainer">
+            <div class="hide">
+                HELLO
+            </div>
         </div>
-        <div class = "mycontainer" id = "rightcolumn"></div>
+        <div class="mycontainer">
+            <h3>Select Your Character</h3>
+            <div>
+                <a href="ryu.html">
+                    <img src="https://wiki.supercombo.gg/images/thumb/b/be/SF6_Ryu_Icon.png/112px-SF6_Ryu_Icon.png">
+    
+                </a>
+
+                <a href="chun.html"><img
+                        src="https://wiki.supercombo.gg/images/thumb/1/1c/SF6_Chun-Li_Icon.png/112px-SF6_Chun-Li_Icon.png"></a>
+            </div>
+        </div>
+        <div class="mycontainer" id="rightcolumn"></div>
     </div>
 </body>
 
