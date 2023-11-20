@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        h2{
+            text-align: center;
+        }
         .mycontainer {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 33vw;
             height: 100vh;
-            background-color: cyan;
+            background-color: black;
             color: white;
             flex-direction: column;
         }
@@ -23,21 +26,41 @@
         }
 
 
-        .hide {
+        .hide1 {
             display: none;
             align-self:flex-start;
         }
+
+        .hide2 {
+            display: none;
+            align-self:flex-start;
+        }
+
 
         a:hover  {
             opacity: 0.5;
             /* display: block; */
         }
 
-        a:hover>.hide{
+        a:hover +.hide1{
             display: block;
             align-self: flex-start;
+            position:absolute;
+            top:0;
+            left:0;
             
         }
+
+        a:hover +.hide2{
+            display: block;
+            align-self: flex-start;
+            position:absolute;
+            top:0;
+            right:0;
+            transform: scaleX(-1);
+            
+        }
+
         body {
             animation: fadeInAnimation ease 3s;
             animation-iteration-count: 1;
@@ -63,24 +86,27 @@
 <body>
     <div class="rowcontainer">
         <div class="mycontainer">
-            <div class="hide">
-                HELLO
-            </div>
         </div>
         <div class="mycontainer">
+            <img src="https://static.wikia.nocookie.net/logopedia/images/0/0d/Street_Fighter_6_logo.png/revision/latest?cb=20220602230830" width="200">
+            <h2>Welcome. Please use this as a resource to learn more about these characters</h2>
             <h3>Select Your Character</h3>
             <div>
                 <a href="ryu.html">
-                    <img src="https://wiki.supercombo.gg/images/thumb/b/be/SF6_Ryu_Icon.png/112px-SF6_Ryu_Icon.png">
-    
-                </a>
+                    <img src="https://wiki.supercombo.gg/images/thumb/b/be/SF6_Ryu_Icon.png/112px-SF6_Ryu_Icon.png"></a>
+                    <img class = "hide1" src="https://www.streetfighter.com/6/assets/images/character/ryu/ryu.png" width=600>
 
-                <a href="chun.html"><img
+
+                <a href="chun.html">
+                    <img
                         src="https://wiki.supercombo.gg/images/thumb/1/1c/SF6_Chun-Li_Icon.png/112px-SF6_Chun-Li_Icon.png"></a>
+                    <img class = "hide2" src="https://www.streetfighter.com/6/assets/images/character/chunli/chunli.png" width = 600>
+
             </div>
-        </div>
-        <div class="mycontainer" id="rightcolumn"></div>
+            <form action=""></form>
     </div>
+    <div class="mycontainer" id="rightcolumn"></div>
+
 </body>
 
 </html>
