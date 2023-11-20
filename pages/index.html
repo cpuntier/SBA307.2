@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mycontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 33vw;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            flex-direction: column;
+        }
+
+        .rowcontainer {
+            display: flex;
+            flex-direction: row;
+        }
+
+        img:hover {
+            opacity: 0.5;
+        }
+
+        body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rowcontainer">
+            <div class = "mycontainer" id = "leftcolumn"></div> 
+            <div class="mycontainer">
+                <h3>Select Your Character</h3>
+                <div>
+                    <a href="ryu.html"><img
+                            src="https://wiki.supercombo.gg/images/thumb/b/be/SF6_Ryu_Icon.png/112px-SF6_Ryu_Icon.png"
+                            alt=""></a>
+                    <a href="chun.html"><img
+                            src="https://wiki.supercombo.gg/images/thumb/1/1c/SF6_Chun-Li_Icon.png/112px-SF6_Chun-Li_Icon.png"
+                            alt=""></a>
+                        </div>
+        </div>
+        <div class = "mycontainer" id = "rightcolumn"></div>
+    </div>
+</body>
+
+</html>
